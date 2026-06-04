@@ -311,7 +311,7 @@ def get_screen_texts() -> dict:
         "contact_screen": (
             "Связаться\n\n"
             "Если хотите обсудить бота для своего бизнеса, можно написать мне:\n\n"
-            f"Telegram:\n{@ElenaBotHelper}\n\n"
+            f"Telegram:\n@ElenaBotHelper\n\n"
             f"WhatsApp:\n{https://wa.me/84796715140}\n\n"
             f"Канал / витрина:\n{https://t.me/business_bots_elena}\n\n"
             "Лучше всего написать коротко:\n"
