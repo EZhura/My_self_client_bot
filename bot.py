@@ -311,9 +311,9 @@ def get_screen_texts() -> dict:
         "contact_screen": (
             "Связаться\n\n"
             "Если хотите обсудить бота для своего бизнеса, можно написать мне:\n\n"
-            f"Telegram:\n{ADMIN_TELEGRAM_URL}\n\n"
-            f"WhatsApp:\n{WHATSAPP_URL}\n\n"
-            f"Канал / витрина:\n{CHANNEL_URL}\n\n"
+            f"Telegram:\n{@ElenaBotHelper}\n\n"
+            f"WhatsApp:\n{https://wa.me/84796715140}\n\n"
+            f"Канал / витрина:\n{https://t.me/business_bots_elena}\n\n"
             "Лучше всего написать коротко:\n"
             "— какой у вас бизнес;\n"
             "— где сейчас пишут клиенты;\n"
@@ -330,7 +330,8 @@ def get_screen_texts() -> dict:
             "3. Какие вопросы повторяются чаще всего:\n"
             "4. Есть ли онлайн-запись / сайт / соцсети:\n"
             "5. Какой формат интересен: админ-бот, клиентский бот, AI или пока не знаю:\n\n"
-            f"Написать в Telegram:\n{ADMIN_TELEGRAM_URL}"
+            f"Написать в Telegram:\n{@ElenaBotHelper}"
+            f"Написать в WhatsApp:\n{https://wa.me/84796715140}"
         ),
 
         "faq_screen": (
