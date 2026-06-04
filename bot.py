@@ -18,14 +18,44 @@ TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "").rstrip("/")
 PORT = int(os.environ.get("PORT", "10000"))
 
-# Необязательные ссылки. Их можно добавить в Render Environment Variables.
-ADMIN_TELEGRAM_URL = os.environ.get("ADMIN_TELEGRAM_URL", "https://t.me/your_username")
-WHATSAPP_URL = os.environ.get("WHATSAPP_URL", "https://wa.me/your_number")
-CHANNEL_URL = os.environ.get("CHANNEL_URL", "https://t.me/your_channel")
+# Необязательные ссылки.
+# Их можно добавить в Render → Environment Variables.
+# Если не добавить, будут использоваться значения по умолчанию ниже.
 
-DEMO_ADMIN_BOT_URL = os.environ.get("DEMO_ADMIN_BOT_URL", "https://t.me/your_admin_demo_bot")
-DEMO_CLIENT_BOT_URL = os.environ.get("DEMO_CLIENT_BOT_URL", "https://t.me/your_client_demo_bot")
-DEMO_AI_BOT_URL = os.environ.get("DEMO_AI_BOT_URL", "https://t.me/your_ai_demo_bot")
+ADMIN_TELEGRAM_URL = os.environ.get(
+    "ADMIN_TELEGRAM_URL",
+    "https://t.me/ElenaBotHelper"
+)
+
+WHATSAPP_URL = os.environ.get(
+    "WHATSAPP_URL",
+    "https://wa.me/84796715140"
+)
+
+CHANNEL_URL = os.environ.get(
+    "CHANNEL_URL",
+    "https://t.me/business_bots_elena"
+)
+
+FAQ_BOT_URL = os.environ.get(
+    "FAQ_BOT_URL",
+    "https://t.me/business_bots_demo_bot"
+)
+
+DEMO_ADMIN_BOT_URL = os.environ.get(
+    "DEMO_ADMIN_BOT_URL",
+    "https://t.me/your_admin_demo_bot"
+)
+
+DEMO_CLIENT_BOT_URL = os.environ.get(
+    "DEMO_CLIENT_BOT_URL",
+    "https://t.me/your_client_demo_bot"
+)
+
+DEMO_AI_BOT_URL = os.environ.get(
+    "DEMO_AI_BOT_URL",
+    "https://t.me/your_ai_demo_bot"
+)
 
 
 # ===== ТЕКСТЫ ЭКРАНОВ =====
@@ -43,7 +73,7 @@ def get_screen_texts() -> dict:
             "— примерную стоимость;\n"
             "— как проходит работа;\n"
             "— что входит в поддержку;\n"
-            "— демо-примеры.\n\n"
+            "— примеры ботов.\n\n"
             "Выберите интересующий раздел ниже."
         ),
 
@@ -291,7 +321,7 @@ def get_screen_texts() -> dict:
             "— кнопок;\n"
             "— FAQ;\n"
             "— клиентских сценариев;\n"
-            "— демо;\n"
+            "— примеров;\n"
             "— AI-модуля;\n"
             "— передачи клиента администратору.\n\n"
             "Если основной поток клиентов у вас идёт из WhatsApp, VK или Instagram, можно отдельно обсудить, "
@@ -300,20 +330,21 @@ def get_screen_texts() -> dict:
         ),
 
         "demo_screen": (
-            "Демо-примеры\n\n"
+            "Примеры ботов\n\n"
             "Можно посмотреть несколько форматов:\n\n"
             f"1. Бот для администратора:\n{DEMO_ADMIN_BOT_URL}\n\n"
             f"2. Клиентский бот:\n{DEMO_CLIENT_BOT_URL}\n\n"
             f"3. Бот с AI-модулем:\n{DEMO_AI_BOT_URL}\n\n"
-            "Это демонстрационные примеры. Под конкретный бизнес структура, тексты, разделы и логика адаптируются отдельно."
+            "Это примеры форматов. Под конкретный бизнес структура, тексты, разделы и логика адаптируются отдельно."
         ),
 
         "contact_screen": (
             "Связаться\n\n"
             "Если хотите обсудить бота для своего бизнеса, можно написать мне:\n\n"
-            f"Telegram:\n@ElenaBotHelper\n\n"
-            f"WhatsApp:\n{https://wa.me/84796715140}\n\n"
-            f"Канал / витрина:\n{https://t.me/business_bots_elena}\n\n"
+            f"Telegram:\n{ADMIN_TELEGRAM_URL}\n\n"
+            f"WhatsApp:\n{WHATSAPP_URL}\n\n"
+            f"Канал-витрина:\n{CHANNEL_URL}\n\n"
+            f"FAQ-бот с ответами:\n{FAQ_BOT_URL}\n\n"
             "Лучше всего написать коротко:\n"
             "— какой у вас бизнес;\n"
             "— где сейчас пишут клиенты;\n"
@@ -330,8 +361,8 @@ def get_screen_texts() -> dict:
             "3. Какие вопросы повторяются чаще всего:\n"
             "4. Есть ли онлайн-запись / сайт / соцсети:\n"
             "5. Какой формат интересен: админ-бот, клиентский бот, AI или пока не знаю:\n\n"
-            f"Написать в Telegram:\n@ElenaBotHelper\n\n"
-            f"Написать в WhatsApp:\n{https://wa.me/84796715140}"
+            f"Написать в Telegram:\n{ADMIN_TELEGRAM_URL}\n\n"
+            f"Написать в WhatsApp:\n{WHATSAPP_URL}"
         ),
 
         "faq_screen": (
@@ -358,7 +389,7 @@ SCREEN_BUTTONS = {
         [("Как проходит работа", "process_screen"), ("Что нужно для старта", "what_needed_screen")],
         [("Поддержка", "support_screen"), ("AI-пакеты", "ai_packages_screen")],
         [("Что входит", "included_screen"), ("Ограничения", "limitations_screen")],
-        [("Демо-примеры", "demo_screen"), ("Связаться", "contact_screen")],
+        [("Примеры ботов", "demo_screen"), ("Связаться", "contact_screen")],
         [("FAQ", "faq_screen")],
     ],
 
@@ -410,7 +441,7 @@ SCREEN_BUTTONS = {
 
     "contact_screen": [
         [("Быстрая заявка", "quick_request_screen")],
-        [("Демо-примеры", "demo_screen")],
+        [("Примеры ботов", "demo_screen")],
         [("В меню", "start_screen")],
     ],
 
