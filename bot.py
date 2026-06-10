@@ -46,7 +46,7 @@ CHANNEL_URL = os.environ.get(
 
 DEMO_CLIENT_BOT_URL = os.environ.get(
     "DEMO_CLIENT_BOT_URL",
-    "https://t.me/business_bots_demo_bot"
+    "https://t.me/beautyclientdemo_bot"
 )
 
 
